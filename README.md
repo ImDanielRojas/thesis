@@ -1,13 +1,13 @@
 # Thesis index
 
-### 1. [Introduction](1.Introduction/Introduction.md)
+### 1. [Introduction](1.Introduction)
 * Thesis background
 * Related work
 * Task definition
 * Proposed approach
 
 
-### 2. [Datasets](2.Datasets/datasets.md)
+### 2. [Datasets](2.Datasets)
 * Train and test data for model building
 * Crop classification data
     #### Jupyter Notebooks
@@ -17,7 +17,7 @@
     * [Dataset class and utils](2.Datasets/Dataset_class_and_utils.ipynb)
 
 
-### 3. [Methods](3.Methods/methods.md)
+### 3. [Methods](3.Methods)
 * Generative Adversarial Networks (GANs)
 * SAM-GAN: Proposed enhancement
 * Evaluation metrics
@@ -29,7 +29,7 @@
     * [SAM-GAN architecture](3.Methods/SAM_GAN_architecture.ipynb)
 
 
-### 4. [Experiments](4.Experiments/Experiments.md)
+### 4. [Experiments](4.Experiments)
 * Training
 * Testing
 * Comparison
