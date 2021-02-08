@@ -11,3 +11,23 @@ Pix2Pix is based on Conditional Generative Adversarial Network (CGAN), whose gen
 ### SAM-GAN: Proposed enhancement
 Most of the loss functions used in architectures are based on two-dimensional feature extraction, computing the error between data extracting them channel by channel. When dealing with hyperspectral data, the most important features and relationships to aim to be extracted are not only on the spatial dimension but on the spectral dimension too. In this study, we propose a loss function that gathers both high-level features from the spatial dimension and the long spectral dimension in order to achieve a solid learning of the structure of the HS data.
 The loss function is based on pix2pix's loss function but adding the Spectral Angle Mapper (SAM) metric to minimize the errors of spectral features. SAM qualifies the similarity of the original and the transformed vector reflectance across the spectra through measuring the average angle between them.
+
+
+### Evaluation metrics
+The resulting generated imagery will be evaluated through three different evaluation approaches:
+
+#### Visual interpretation
+The visual interpretation and comparison of the results played an important role on the training of the data since we were able to easily interpret whether we had to tune the model because of blurriness issues or offset data. However, it will not be an important decisive factor in the final comparison since the visual interpretation of 170 bands can not be easily readable, although we can have a good glance of it by visualizing three bands composing the RGB channels in a False Color Composite (FCC).
+
+#### Statistical metrics
+Quality of the data will also be statistically evaluated. This evaluation will be separated in two classes: band-wise evaluation and pixel-wise evaluation.
+
+Band-wise evaluation will consider the next metrics:
+* Pearson’s Correlation Coefficient (PCC) measures the  linear correlation between the real and fake bands
+* Root-Mean-Square Error (RMSE) measures the difference between reflectances of real and fake bands
+* Peak Signal-to-Noise Ratio (PSNR) measures the quality of the reconstructed image
+* Structural Similarity index (SSIM) assesses the visual impact of luminance, contrast, and structure characteristics of the predicted image into a single index metric
+
+Regarding the pixel-wise evaluation, we used more task-specific metrics which take into account the 170-long vector of reflectances of a single pixel. The next metrics will be measured for the generated data:
+* Spectral Angle Mapper (SAM) evaluates the difference between two spectra (real and fake pixel) by measuring the angle.
+* Spectral Information Divergence (SID) is an information theoretic spectral metric which considers each pixel as a random variable and uses its spectral histogram to define a probability distribution. The spectral similarity between two pixels is measured by the discrepancy of probabilistic behaviours between their spectra.
