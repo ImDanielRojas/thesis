@@ -12,7 +12,7 @@ Pix2Pix is based on Conditional Generative Adversarial Network (CGAN), whose gen
 Most of the loss functions used in architectures are based on two-dimensional feature extraction, computing the error between data extracting them channel by channel. When dealing with hyperspectral data, the most important features and relationships to aim to be extracted are not only on the spatial dimension but on the spectral dimension too. In this study, we propose a loss function that gathers both high-level features from the spatial dimension and the long spectral dimension in order to achieve a solid learning of the structure of the HS data.
 The loss function is based on pix2pix's loss function but adding the Spectral Angle Mapper (SAM) metric to minimize the errors of spectral features. SAM qualifies the similarity of the original and the transformed vector reflectance across the spectra through measuring the average angle between them.
 
-![SAM-GAN architecture](5.Appendix/images/GANmodel.svg)
+![SAM-GAN architecture](https://github.com/Rojas-D/thesis/blob/main/5.Appendix/images/GANmodel.svg)
 
 ### Evaluation metrics
 The resulting generated imagery will be evaluated through three different evaluation approaches:
