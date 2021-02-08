@@ -6,13 +6,18 @@ The generator, U-Net, consists of an encoder-decoder architecture in which a con
 The discriminator will decide whether the unknown image was generated from the generator or not. The architecture is also called a PatchGAN and will decide if patches from the sub-image patches are real or not.
 We will focus out study around the Pix2Pix model, a state-of-the-art framework for image translation based on GANs extracting correspondence features between pairs of images. This model is a general-purpose solution for image translation tasks and is sometimes limited due to this generalization, which makes it non-specialized in capturing relationships between original and constructed images of specific constraints, characteristics and abstractions.
 Transforming Multispectral data to Hyperspectral data is a clear example of a task and data that differs from the standard example solutions in which Pix2Pix is often showed performing.
-Pix2Pix is based on Conditional Generative Adversarial Network (CGAN), whose generator network learns a mapping from the input image $x$ to the target image y, i.e., x->y and the discriminator network will try to classify y|x, real or fake.
+Pix2Pix is based on Conditional Generative Adversarial Network (CGAN), whose generator network learns a mapping from the input image $x$ to the target image y, i.e., x->y and the discriminator network will try to classify y|x, real or fake. The loss function of Pix2Pix is defined by:
+![pix2pix loss function](https://github.com/Rojas-D/thesis/blob/main/5.Appendix/images/loss_pix2pix.png)
+
 
 ### SAM-GAN: Proposed enhancement
 Most of the loss functions used in architectures are based on two-dimensional feature extraction, computing the error between data extracting them channel by channel. When dealing with hyperspectral data, the most important features and relationships to aim to be extracted are not only on the spatial dimension but on the spectral dimension too. In this study, we propose a loss function that gathers both high-level features from the spatial dimension and the long spectral dimension in order to achieve a solid learning of the structure of the HS data.
-The loss function is based on pix2pix's loss function but adding the Spectral Angle Mapper (SAM) metric to minimize the errors of spectral features. SAM qualifies the similarity of the original and the transformed vector reflectance across the spectra through measuring the average angle between them.
+The loss function is based on pix2pix's loss function but adding the Spectral Angle Mapper (SAM) metric to minimize the errors of spectral features. SAM qualifies the similarity of the original and the transformed vector reflectance across the spectra through measuring the average angle between them. The proposed SAM-GAN architecture is the next:
 
 ![SAM-GAN architecture](https://github.com/Rojas-D/thesis/blob/main/5.Appendix/images/GANmodel.svg)
+
+The proposed SAM-GAN architecture's loss function is defined by
+![pix2pix loss function](https://github.com/Rojas-D/thesis/blob/main/5.Appendix/images/loss_samgan.png)
 
 ### Evaluation metrics
 The resulting generated imagery will be evaluated through three different evaluation approaches:
