@@ -21,12 +21,12 @@
 * Generative Adversarial Networks (GANs)
 * SAM-GAN: Proposed enhancement
 * Evaluation metrics
-#### Jupyter Notebooks
-* [Metrics](3.Methods/Metrics.ipynb)
-* [CNN architecture](3.Methods/CNN_architecture.ipynb)
-* [pix2pix architecture](3.Methods/pix2pix_architecture.ipynb)
-* [iPAN architecture](3.Methods/iPAN_architecture.ipynb)
-* [SAM_GAN architecture](3.Methods/SAM_GAN_architecture.ipynb)
+    #### Jupyter Notebooks
+    * [Metrics](3.Methods/Metrics.ipynb)
+    * [CNN architecture](3.Methods/CNN_architecture.ipynb)
+    * [pix2pix architecture](3.Methods/pix2pix_architecture.ipynb)
+    * [iPAN architecture](3.Methods/iPAN_architecture.ipynb)
+    * [SAM_GAN architecture](3.Methods/SAM_GAN_architecture.ipynb)
 
 
 ### 4. [Experiments](4.Experiments)
@@ -34,7 +34,7 @@
 * Testing
 * Comparison
 * Results
-#### Jupyter Notebooks
-* [Data and model set up, training and testing](4.Experiments/SetUp_Training_Test.ipynb)
+    #### Jupyter Notebooks
+    * [Data and model set up, training and testing](4.Experiments/SetUp_Training_Test.ipynb)
 
 ### 5. Appendix
