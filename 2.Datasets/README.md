@@ -17,4 +17,4 @@ The data that will be provided to the model will be in a set of multiple pair-id
 #### Data acquisition
 The image data selected for crop classification is a crop-specific land use data, the Cropland Data Layer (CDL) product from the USDA NASS that covers the entire Contiguous United States (CONUS) at 30-meter spatial resolution with very high accuracy up to 95% for major crop types (i.e., grape, almond) in major crop area.
 
-![](CDL_2016_CropStats.png)
+![USA NASS Crop Data Layer Classification](https://github.com/Rojas-D/thesis/blob/main/5.Appendix/images/CDL_2016_CropStats.png)
