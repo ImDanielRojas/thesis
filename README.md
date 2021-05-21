@@ -1,3 +1,9 @@
+### * [Read the article](https://ddd.uab.cat/record/238422/)
+
+### * [Read the poster](PosterTFG.pdf)
+
+------------------------------------------
+
 # Thesis index
 
 ### 1. [Introduction](1.Introduction)
